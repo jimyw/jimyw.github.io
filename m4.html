@@ -50,8 +50,8 @@
           <ul class="nav navbar-nav">
             <li><a href="m1.html">M1</a></li>
             <li><a href="m2.html">M2</a></li>
-            <li class="active"><a href="m3.html">M3</a></li>
-            <li><a href="m4.html">M4</a></li>
+            <li><a href="m3.html">M3</a></li>
+            <li class="active"><a href="m4.html">M4</a></li>
             <li><a href="m5.html">M5</a></li>
             <li><a href="m6.html">M6</a></li>
             <li><a href="m7.html">M7</a></li>
@@ -75,6 +75,7 @@
             <br/>
             <h3 class="blog-post-title">Overview</h3>
             <p>At this stage, we decided to move forward with what we are calling “Card Collage”, an app that allows you to sketch a template, take photos or videos that match the template, and tile them to create cards, flyers, and special messages. It’s designed to spark collaboration between multiple people assembling the collage, and creative responses from those who are receiving the collage.</p>
+            <!-- <p class="blog-post-meta">Note: In discussion with John, he said it </p> -->
 
           </br>
             <br/>
@@ -118,8 +119,16 @@
 
             <br/>
 
+            <h3 class="blog-post-title">This week's tasks</h3>
+            <p>Card Collage has three types of users - the planner who makes the template and invites collaborators, collaborators who contribute pieces, and the recipient. We decided that our first prototype would focus on the collaborator, because it requires multiple people understanding the purpose, and because taking good photos/videos seems to be the most difficult step. Since the collaborators have the least motivation to contribute to the project, we wanted to make sure they have an engaging and easy user experience. As such, we play the role of the planner and provide the starting template. </p>
+
+            <p>At the same time, we wanted to test how the resulting collages would actually have the desired effect on the recipients (delight, engagement, participation). As such Dan also made several collages himself WOz-style and did WOz tests on several recipients.</p>
+
+            <br/>
+
             <h3 class="blog-post-title">WOz testing for Card Collage recipients</h3>
-            <p>We thought it would be informative to focus our functional prototyping on the collaborator stage, because it was technically complex. But we also wanted to make sure that the resulting collages would actually have the desired effect on the recipients (delight, engagement, participation). I (Dan) tested this with several recipient WOz tests:</p>
+            <p class="blog-post-meta">Written from Dan's perspective, i.e. first person is Dan. </p>
+            <!-- <p>We thought it would be informative to focus our functional prototyping on the collaborator stage, because it was technically complex. But we also wanted to make sure that the resulting collages would actually have the desired effect on the recipients (delight, engagement, participation). I (Dan) tested this with several recipient WOz tests:</p> -->
 
             <h3 class="board-item"> Test 1: Birthday card (empty slot)</h3>
             <!-- <p class="blog-post-meta">Building social capital with remote coworkers</p>
@@ -175,40 +184,56 @@
             <br/>
 
             <h3 class="blog-post-title">Overview of Features</h3>
-              <p>Card Collage has three types of users - the planner who makes the template, collaborators who add pieces, and the recipient. We decided that our first prototype would focus on the collaborator, because the act of understanding the project and taking good photos/videos seems to be the most difficult step. We would provide the starting template, and we would restrict to photos instead of video. </p>
-              <p>For this prototype, we chose a zigzag pattern (see the party flyer above) as our template for two reasons. First, each tile in the zigzag is a simple 90-degree angle, which is easy to create with your arms. Second, the zigzag is a linear pattern that can be made longer or shorter to accommodate people for testing.</p>
-              <p>We sketched out a basic flow diagram of screens the collaborator would see:</p>
+            <p class="blog-post-meta">The current prototype is focused on collaborator contribution.</p>
+              <!-- <p>Card Collage has three types of users - the planner who makes the template, collaborators who add pieces, and the recipient. We decided that our first prototype would focus on the collaborator, because the act of understanding the project and taking good photos/videos seems to be the most difficult step. We would provide the starting template, and we would restrict to photos instead of video. </p> -->
+              <p>1. For this prototype, we chose a zigzag pattern (see the party flyer above) as our template for two reasons. First, each tile in the zigzag is a simple 90-degree angle, which is easy to create with your arms. Second, the zigzag is a linear pattern that can be made longer or shorter to accommodate people for testing.</p>
+              <p>2. The main flow diagram of screens the collaborator would see are:</p>
               <ul>
                 <li>A main screen showing the current status of the collage, and inviting the user to click a tile;</li>
                 <li>A photo screen where the user could take a photo to complete that tile and see how it looks;</li>
-                <li>And a comments screen where the user can tag his or her photo with a personalized message.</li>
+                <li>And a personal message screen where the user can tag his or her photo with a personalized video or text message.</li>
+                <li>Return to the main screen where the collaborator now sees his or her contribution along with all other contributions.</li>
               </ul>
-              <p>We also decided to constrain our app to only show photos when you first enter the main screen. Originally, we thought that any videos in the collage would play silently and simultaneously, but we decided that this would be visually confusing and disrupt the template pattern.</p>
-              <p>When users take a picture, they will get a countdown timer so that they have time to get into position.</p>
-              <p>The WOz testing above made it clear that users taking a photo need the template overlaid on their photo image, so that they can make an accurate recreation of the template. In other words, while you are lining up a photo to replace a tile, you see a faint picture of the tile on your phone or computer. Without it, a heart template:</p>
+              <p>3. We also decided to constrain our app to only show photos when you first enter the main screen. Originally, we thought that any videos in the collage would play silently and simultaneously, but we decided that this would be visually confusing and disrupt the template pattern.</p>
+              <p>4. When users take a picture, they will get a countdown timer so that they have time to get into position.</p>
+              <p>5. The WOz testing above and from last week made it clear that users taking a photo need the template overlaid on their photo image, so that they can make an accurate recreation of the template. In other words, while you are lining up a photo to replace a tile, you see a faint picture of the tile on your phone or computer. Without it, a heart template from last week's WOz testing:</p>
               <div><img src="img/pro7.jpg" alt="pro7" height="300"></div>
 
-              <p>...ends up looking like this mess:</p>
+              <p>...ends up looking like this:</p>
               <div><img src="img/pro8.jpg" alt="pro8" height="300"></div>
 
               <br/>
               <h3 class="blog-post-title">Implementation notes</h3>
-                <p>While we were testing the photo-taking screen, we noticed that the webcam image is reversed! This makes it very confusing to match a template. We reversed the video signal using CSS, but the image that got saved when we took a photo was still the wrong way. An interesting bug that only revealed itself during development.</p>
-                <p>Our webcam images are in widescreen format, but each tile in the collage is a square. We are currently stretching each image to make it a square, but it’s not very visually appealing.</p>
-                <p>On the back end, we decided to use Firebase to store data because we want it to be possible for multiple people to use Card Collage synchronously.</p>
+                <p>1. While we were testing the photo-taking screen, we noticed that the webcam image is reversed! This makes it very confusing to match a template. We reversed the video signal using CSS, but the image that got saved when we took a photo was still the wrong way. An interesting bug that only revealed itself during development.</p>
+                <p>2. Our webcam images are in widescreen format, but each tile in the collage is a square. We used CSS to cut the webcam image into a square tile by hiding the parts outside the frame.</p>
+                <p>3. On the back end, we decided to use Firebase to store data because we want it to be possible for multiple people to use Card Collage synchronously.</p>
+                <p>4. Reshaping or cropping webcam photos into a square shape, instead of distorting them.</p>
 
               <br/>
 
-              <h3 class="blog-post-title">Current wish list of desired features</h3>
-              <p>Most importantly - a means of effectively engaging the recipient of a card collage after it’s complete. We don’t want receiving a card collage to be a passive experience - we want to hook people in so that they feel connected to the creators and want to add something back. User testing next week will focus on promoting this engagement.</p>
-              <p>Reshaping or cropping webcam photos into a square shape, instead of distorting them.</p>
-              <p>A way to optionally see the original template when you send a collage. Part of the fun of the collage appears to be seeing how others meet the challenge of making their piece, but you can’t judge the challenge if you can’t see the original template.</p>
-              <p>One idea we are considering: instead of adding a photo and optionally adding videos on the “other side” of the tile, just add a video, and make the first frame of the video the picture on the tile. That way, when the recipient mouses over the tile, the picture comes to life.</p>
+              <h3 class="blog-post-title">Future Implementation and Design Tasks</h3>
+
+              <!-- <br/>
+
+              <h3 class="blog-post-title">Current wish list of desired features</h3> -->
+              <p>1. Build the recipient exprience. Most importantly - a means of effectively engaging the recipient of a card collage after it’s complete. We don’t want receiving a card collage to be a passive experience - we want to hook people in so that they feel connected to the creators and want to add something back. We will do more user testing next week to focus on promoting this engagement, build that experience for the user, and iterate with more testing and building.</p>
+              
+              <p>2. Build the planner interface, to complete the end-to-end experience. In particular, planner creates a template and sends link to multiple people. <!-- Some key questions include:  -->
+               <!--  <ul>
+                  <li>Which templates do we allow?</li>
+                  <li>What experience 
+                </ul> -->
+              As a design decision, we won't focus on this interface as much because we want to hone in on the user experience for collaborator and recipient. For now, we assume the planner is heavily motivated to start the collage and invite friends. 
+              </p>
+
+              <p>3. A way to optionally see the original template when you send a collage. Part of the fun of the collage appears to be seeing how others meet the challenge of making their piece, but you can’t judge the challenge if you can’t see the original template.</p>
+              <p>4. `One idea we are considering: instead of adding a photo and optionally adding videos on the “other side” of the tile, just add a video, and make the first frame of the video the picture on the tile. That way, when the recipient mouses over the tile, the picture comes to life.</p>
               <ul>  
                 <li>Advantages of the “video first frame” method: you force everyone to make a video, and you get the illusion of making the videos come to life when you mouse over them</li>
                 <li>Advantages of the “flip the tile” method: it’s technically easier, you DON’T force people to make videos, and you can also add text.</li>              
               </ul>
             <br/>
+
 
 
           <ul class="pager">
