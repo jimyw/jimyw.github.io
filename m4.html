@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Prototype I</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="stylesheets/bootstrap-theme.min.css" rel="stylesheet">
+
+    <link href="stylesheets/main.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/blog.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">JJD's CS247 Project</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="m1.html">M1</a></li>
+            <li><a href="m2.html">M2</a></li>
+            <li class="active"><a href="m3.html">M3</a></li>
+            <li><a href="m4.html">M4</a></li>
+            <li><a href="m5.html">M5</a></li>
+            <li><a href="m6.html">M6</a></li>
+            <li><a href="m7.html">M7</a></li>
+            <li><a href="m8.html">M8</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="blog-header">
+        <h1 class="blog-title blog-title-user">Milestone 4: Functional Prototype I</h1>
+        <p class="lead blog-description">May 8, 2014</p>
+      </div>
+
+      <div class="row">
+
+
+          <div class="blog-post blog-main">
+            <br/>
+            <h3 class="blog-post-title">Overview</h3>
+            <p>At this stage, we decided to move forward with what we are calling “Card Collage”, an app that allows you to sketch a template, take photos or videos that match the template, and tile them to create cards, flyers, and special messages. It’s designed to spark collaboration between multiple people assembling the collage, and creative responses from those who are receiving the collage.</p>
+
+          </br>
+            <br/>
+            <h3 class="blog-post-title">Need-finding redux</h3>
+            <p>In order to make sure that our project was matching real needs, we went back to the need-finding step to get a clearer picture, interviewing four people:</p>
+
+            <p>Mary:</p>
+              <ul>
+                <li>a mother, and part of a large extended family</li>
+                <li>loves making physical cards to send out</li>
+                <li>receives e-cards, but sometimes there's no way to respond, even by replying to the email!</li>
+                <li>she wants a way to express gratitude for these cards, BACK to the senders.</li>
+              </ul>
+
+            <p>DJ:</p>
+              <ul>
+                <li>a son in a large family</li>
+                <li>lives far from home, where his dad is recovering from a concussion</li>
+                <li>his brother lives in LA</li>
+                <li>they want to join forces to make something personal and nice for their dad. they send individual emails, but they want to do something together. Seems like a job for Card Collage!</li>
+              </ul>
+
+            <p>Bosch:</p>
+              <ul>
+                <li>Works for the Reikes Center, a nature center and after-school program in Redwood City</li>
+                <li>He has never really gotten e-cards, and likes physical stuff</li>
+                <li>But he wants to make cool outreach emails for the parents of the Reikes Center kids, to show them what they have all been doing</li>
+                <li>If he used Card Collage, he would get each kid to make something cool for each picture, and then have it spell out "Reikes"</li>                
+                <li>"It would be awesome if they could each express themselves, but you also get to see them as part of something bigger than themselves"</li>
+              </ul>
+
+            <p>Nancy:</p>
+              <ul>
+                <li>a mother - her family members all live in different places (SF, LA, Indiana, Palo Alto)</li>
+                <li>she wants to make a family card to send out from her whole family</li>
+                <li>she's not particularly tech-savvy and doesn't have a smartphone though!</li>
+                <li>"It would be fun if each recipient could add their own piece to the card, like a chain letter"</li>
+              </ul>
+
+            <p>As a result, we were more confident that something like Card Collage could meet a need to make nice collaborative cards. The people we interviewed also went beyond our project conception by suggesting an ongoing collage (like a chain letter), and two of them emphasized having the recipient respond in some creative way, perhaps by adding their own photo or video.</p>
+
+            <br/>
+
+            <h3 class="blog-post-title">WOz testing for Card Collage recipients</h3>
+            <p>We thought it would be informative to focus our functional prototyping on the collaborator stage, because it was technically complex. But we also wanted to make sure that the resulting collages would actually have the desired effect on the recipients (delight, engagement, participation). I (Dan) tested this with several recipient WOz tests:</p>
+
+            <h3 class="board-item"> Test 1: Birthday card (empty slot)</h3>
+            <!-- <p class="blog-post-meta">Building social capital with remote coworkers</p>
+            <div class="image-attach"><img src="img/Storyboard1.jpg" alt="board1" width="100%"></div> 
+            -->
+            <p>The purpose of this test was to see how enthusiastic someone would be about receiving a Card Collage with an implicit invitation to fill in the middle piece.</p>
+            <p>I got myself and three of my friends to strike poses, and assembled them into a card with an empty space in the middle:</p>
+
+            <div><img src="img/pro1.jpg" alt="pro1" height="300"></div>
+            <p>Below the picture were birthday messages from each of the four people. (In a full version, these might be built into the tiles.)</p>
+            <p>I emailed it to another friend, and asked him if he would want to put a picture in the middle as a response if he received it as a birthday card. He said that he would, but that he felt very uncomfortable being prompted for a response in a way that put a lot of attention on him. This may be less uncomfortable if we offered a template for what he should put in the middle, rather than giving him an empty space.</p>
+
+            <h3 class="board-item"> Test 2: Birthday card (template slot)</h3>
+            <!-- <p class="blog-post-meta">Building social capital with remote coworkers</p>
+            <div class="image-attach"><img src="img/Storyboard1.jpg" alt="board1" width="100%"></div> 
+            -->
+            <p>Second iteration, this time with a template:</p>
+            <div><img src="img/pro2.jpg" alt="pro2" height="300"></div>
+
+            <p>I sent it to the same friend in order to see if that made him feel better. It did! Here is the result:</p>
+            <div><img src="img/pro3.jpg" alt="pro3" height="300"></div>
+
+            <p>This was useful - it suggested that people benefit from clear instructions on how to contribute, especially when they are on the spot!</p>
+
+            <h3 class="board-item"> Test 3: Birthday card (full slot)</h3>
+            <!-- <p class="blog-post-meta">Building social capital with remote coworkers</p>
+            <div class="image-attach"><img src="img/Storyboard1.jpg" alt="board1" width="100%"></div> 
+            -->
+            <p>I tried the same thing, but this time putting a photo in the middle in advance. The goal was to see how someone would react to a birthday card that used a photo of them as part of a collage.</p>
+            <div><img src="img/pro4.jpg" alt="pro4" height="300"></div>
+
+            <p>I sent it to my girlfriend, with the same birthday messages, and asked her what she thought. She thought it was kind of bizarre and quirky, but not upsetting. It didn’t look like a “normal” birthday card. She said that this made her not want to use it with her friends. My takeaway - sending someone a card with all of the pieces filled in is not a sufficient prompt for communication or response.</p>
+
+            <h3 class="board-item"> Test 4: Valentine’s Day card</h3>
+            <!-- <p class="blog-post-meta">Building social capital with remote coworkers</p>
+            <div class="image-attach"><img src="img/Storyboard1.jpg" alt="board1" width="100%"></div> 
+            -->
+            <p>For a second test of this theory, I sent my girlfriend a Valentine’s Day card that I made myself, with no notes:</p>
+            <div><img src="img/pro5.jpg" alt="pro5" height="300"></div>
+
+            <p>She thought that it was cute, but just saw it as a funny picture and not an invitation to communicate. Again, without some kind of scaffold, she had no spontaneous sense that she should add something.</p>
+
+            <h3 class="board-item"> Test 5: Party flyer</h3>
+            <!-- <p class="blog-post-meta">Building social capital with remote coworkers</p>
+            <div class="image-attach"><img src="img/Storyboard1.jpg" alt="board1" width="100%"></div> 
+            -->
+            <p>I made a fake flyer for a party at my house (the house’s name is Ithaka):</p>
+            <div><img src="img/pro6.jpg" alt="pro6" height="300"></div>
+
+            <p>I sent this flyer to three friends for feedback. They thought that it was quirky and funny, and sort of amusingly bad looking, but not very out of the ordinary. It was just a flyer, with no sense of rich communication. Same problem as above.</p>
+
+            <p>Again, our big takeaway was that the cards are nice enough to look at, but that they won’t prompt creative responses without detailed scaffolding. This is our major design challenge, but we are confident that we can engage the recipient when we add video, embedded personal messages, and the right kind of invitation to participate.</p>
+            <br/>
+
+            <h3 class="blog-post-title">Overview of Features</h3>
+              <p>Card Collage has three types of users - the planner who makes the template, collaborators who add pieces, and the recipient. We decided that our first prototype would focus on the collaborator, because the act of understanding the project and taking good photos/videos seems to be the most difficult step. We would provide the starting template, and we would restrict to photos instead of video. </p>
+              <p>For this prototype, we chose a zigzag pattern (see the party flyer above) as our template for two reasons. First, each tile in the zigzag is a simple 90-degree angle, which is easy to create with your arms. Second, the zigzag is a linear pattern that can be made longer or shorter to accommodate people for testing.</p>
+              <p>We sketched out a basic flow diagram of screens the collaborator would see:</p>
+              <ul>
+                <li>A main screen showing the current status of the collage, and inviting the user to click a tile;</li>
+                <li>A photo screen where the user could take a photo to complete that tile and see how it looks;</li>
+                <li>And a comments screen where the user can tag his or her photo with a personalized message.</li>
+              </ul>
+              <p>We also decided to constrain our app to only show photos when you first enter the main screen. Originally, we thought that any videos in the collage would play silently and simultaneously, but we decided that this would be visually confusing and disrupt the template pattern.</p>
+              <p>When users take a picture, they will get a countdown timer so that they have time to get into position.</p>
+              <p>The WOz testing above made it clear that users taking a photo need the template overlaid on their photo image, so that they can make an accurate recreation of the template. In other words, while you are lining up a photo to replace a tile, you see a faint picture of the tile on your phone or computer. Without it, a heart template:</p>
+              <div><img src="img/pro7.jpg" alt="pro7" height="300"></div>
+
+              <p>...ends up looking like this mess:</p>
+              <div><img src="img/pro8.jpg" alt="pro8" height="300"></div>
+
+              <br/>
+              <h3 class="blog-post-title">Implementation notes</h3>
+                <p>While we were testing the photo-taking screen, we noticed that the webcam image is reversed! This makes it very confusing to match a template. We reversed the video signal using CSS, but the image that got saved when we took a photo was still the wrong way. An interesting bug that only revealed itself during development.</p>
+                <p>Our webcam images are in widescreen format, but each tile in the collage is a square. We are currently stretching each image to make it a square, but it’s not very visually appealing.</p>
+                <p>On the back end, we decided to use Firebase to store data because we want it to be possible for multiple people to use Card Collage synchronously.</p>
+
+              <br/>
+
+              <h3 class="blog-post-title">Current wish list of desired features</h3>
+              <p>Most importantly - a means of effectively engaging the recipient of a card collage after it’s complete. We don’t want receiving a card collage to be a passive experience - we want to hook people in so that they feel connected to the creators and want to add something back. User testing next week will focus on promoting this engagement.</p>
+              <p>Reshaping or cropping webcam photos into a square shape, instead of distorting them.</p>
+              <p>A way to optionally see the original template when you send a collage. Part of the fun of the collage appears to be seeing how others meet the challenge of making their piece, but you can’t judge the challenge if you can’t see the original template.</p>
+              <p>One idea we are considering: instead of adding a photo and optionally adding videos on the “other side” of the tile, just add a video, and make the first frame of the video the picture on the tile. That way, when the recipient mouses over the tile, the picture comes to life.</p>
+              <ul>  
+                <li>Advantages of the “video first frame” method: you force everyone to make a video, and you get the illusion of making the videos come to life when you mouse over them</li>
+                <li>Advantages of the “flip the tile” method: it’s technically easier, you DON’T force people to make videos, and you can also add text.</li>              
+              </ul>
+            <br/>
+
+
+          <ul class="pager">
+            <li><a href="m3.html">Previous</a></li>
+            <li><a href="m5.html">Next</a></li>
+          </ul>
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <div class="blog-footer">
+        <a href="#">Back to top</a>
+      </p>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+  </body>
+</html>
