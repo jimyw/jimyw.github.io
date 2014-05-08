@@ -186,6 +186,16 @@
             <h3 class="blog-post-title">Overview of Features</h3>
             <p class="blog-post-meta">The current prototype is focused on collaborator contribution.</p>
               <!-- <p>Card Collage has three types of users - the planner who makes the template, collaborators who add pieces, and the recipient. We decided that our first prototype would focus on the collaborator, because the act of understanding the project and taking good photos/videos seems to be the most difficult step. We would provide the starting template, and we would restrict to photos instead of video. </p> -->
+              
+              <p>The planner goes to the Card Collage app and creates a new template - choosing the number and arrangement of tiles, and using a simple plugin to draw a design on the tiles. This could be a pattern, a set of letters, or anything else. Once complete, the planner gets a URL to share with collaborators.</p>
+              <p>Collaborators access the collage template via the planner's URL, and they can choose a tile to fill in by clicking it. When they click a tile, they go to a "Take a photo" page where they use their webcam to take a photo. Their goal is to take a photograph that matches the template. They get a 3-second countdown and a partially-transparent image of the template over their webcam image in order to help them take an accurate photo. If they don't like the result, they can retry. The WOz testing above and from last week made it clear that users taking a photo need the template overlaid on their photo image, so that they can make an accurate recreation of the template. In other words, while you are lining up a photo to replace a tile, you see a faint picture of the tile on your phone or computer. Without it, a heart template from last week's WOz testing:</p>
+              <div><img src="img/pro7.jpg" alt="pro7" height="300"></div>
+
+              <p>...ends up looking like this:</p>
+              <div><img src="img/pro8.jpg" alt="pro8" height="300"></div></p>
+              
+              
+              
               <p>1. For this prototype, we chose a zigzag pattern (see the party flyer above) as our template for two reasons. First, each tile in the zigzag is a simple 90-degree angle, which is easy to create with your arms. Second, the zigzag is a linear pattern that can be made longer or shorter to accommodate people for testing.</p>
               <p>2. The main flow diagram of screens the collaborator would see are:</p>
               <ul>
@@ -195,21 +205,10 @@
                 <li>Return to the main screen where the collaborator now sees his or her contribution along with all other contributions.</li>
               </ul>
               <p>3. We also decided to constrain our app to only show photos when you first enter the main screen. Originally, we thought that any videos in the collage would play silently and simultaneously, but we decided that this would be visually confusing and disrupt the template pattern.</p>
-              <p>4. When users take a picture, they will get a countdown timer so that they have time to get into position.</p>
-              <p>5. The WOz testing above and from last week made it clear that users taking a photo need the template overlaid on their photo image, so that they can make an accurate recreation of the template. In other words, while you are lining up a photo to replace a tile, you see a faint picture of the tile on your phone or computer. Without it, a heart template from last week's WOz testing:</p>
-              <div><img src="img/pro7.jpg" alt="pro7" height="300"></div>
-
-              <p>...ends up looking like this:</p>
-              <div><img src="img/pro8.jpg" alt="pro8" height="300"></div>
+              <p>5. 
 
               <br/>
-              <h3 class="blog-post-title">Implementation notes</h3>
-                <p>1. While we were testing the photo-taking screen, we noticed that the webcam image is reversed! This makes it very confusing to match a template. We reversed the video signal using CSS, but the image that got saved when we took a photo was still the wrong way. An interesting bug that only revealed itself during development.</p>
-                <p>2. Our webcam images are in widescreen format, but each tile in the collage is a square. We used CSS to cut the webcam image into a square tile by hiding the parts outside the frame.</p>
-                <p>3. On the back end, we decided to use Firebase to store data because we want it to be possible for multiple people to use Card Collage synchronously.</p>
-                <p>4. Reshaping or cropping webcam photos into a square shape, instead of distorting them.</p>
 
-              <br/>
 
               <h3 class="blog-post-title">Future Implementation and Design Tasks</h3>
 
@@ -234,27 +233,14 @@
               </ul>
             <br/>
             
-            <h3 class="blog-post-title">Test update</h3>
+            
+            <h3 class="blog-post-title">Other Implementation Notes</h3>
 
-              <!-- <br/>
+                <p>1. While we were testing the photo-taking screen, we noticed that the webcam image is reversed! This makes it very confusing to match a template. We reversed the video signal using CSS, but the image that got saved when we took a photo was still the wrong way. An interesting bug that only revealed itself during development.</p>
+                <p>2. Our webcam images are in widescreen format, but each tile in the collage is a square. We used CSS to cut the webcam image into a square tile by hiding the parts outside the frame.</p>
+                <p>3. On the back end, we decided to use Firebase to store data because we want it to be possible for multiple people to use Card Collage synchronously.</p>
 
-              <h3 class="blog-post-title">Current wish list of desired features</h3> -->
-              <p>1. Build the recipient exprience. Most importantly - a means of effectively engaging the recipient of a card collage after it’s complete. We don’t want receiving a card collage to be a passive experience - we want to hook people in so that they feel connected to the creators and want to add something back. We will do more user testing next week to focus on promoting this engagement, build that experience for the user, and iterate with more testing and building.</p>
-              
-              <p>2. Build the planner interface, to complete the end-to-end experience. In particular, planner creates a template and sends link to multiple people. <!-- Some key questions include:  -->
-               <!--  <ul>
-                  <li>Which templates do we allow?</li>
-                  <li>What experience 
-                </ul> -->
-              As a design decision, we won't focus on this interface as much because we want to hone in on the user experience for collaborator and recipient. For now, we assume the planner is heavily motivated to start the collage and invite friends. 
-              </p>
-
-              <p>3. A way to optionally see the original template when you send a collage. Part of the fun of the collage appears to be seeing how others meet the challenge of making their piece, but you can’t judge the challenge if you can’t see the original template.</p>
-              <p>4. `One idea we are considering: instead of adding a photo and optionally adding videos on the “other side” of the tile, just add a video, and make the first frame of the video the picture on the tile. That way, when the recipient mouses over the tile, the picture comes to life.</p>
-              <ul>  
-                <li>Advantages of the “video first frame” method: you force everyone to make a video, and you get the illusion of making the videos come to life when you mouse over them</li>
-                <li>Advantages of the “flip the tile” method: it’s technically easier, you DON’T force people to make videos, and you can also add text.</li>              
-              </ul>
+  
             <br/>
             
 
