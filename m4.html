@@ -203,25 +203,32 @@
               <br/>
 
               <h3 class="blog-post-title">Current Implementation Progress</h3>
-              
-              <p>- Unique collages hosted at different URLs</p>
-              <p>- Users can choose tiles, upload photos, and attach video and text to them</p>
-              <p>- Users get a countdown and semi-transparent overlay on their webcam image to help them take photos.</p>
-              <p>- Users can see the contributions of other users</p>
-              
+              <p>Our current implementation progress focused on a complete experience for the collaborator. In particular, we accomplished the following:</p>
+              <ul>
+                <li>Set up frontend to record video messages and take pictures, and to preview those rich media.</li>
+                <li>Set up backend to push data to Firebase and retrieve data from Firebase.</li>
+                <li>Host unique collages at different URLs, and allow all collaborators access to the same unique collage.</li>
+                <li>Users can choose tiles, upload photos, and attach video and text to them.</li>
+                <li>Users get a countdown and semi-transparent overlay on their webcam image to help them take photos.</li>
+                <li>Contributions from all users are synchronized in real time.</li>
+                <li>Users can see photo contribution from other users so they get a sense for what they need to do.</li>
+              </ul>
+
               <br/>
 
 
               <h3 class="blog-post-title">Future Implementation and Design Tasks</h3>
 
-              <!-- <br/>
+              <p>0. Add capability for collaborators to preview other people's videos and text messages. Currently, we disable that feature for privacy reasons (to allow more personal messages), but we want to have that option, which the planner can enable or disable. </p>
 
-              <h3 class="blog-post-title">Current wish list of desired features</h3> -->
               <p>1. Build the recipient exprience. Most importantly - a means of effectively engaging the recipient of a card collage after it’s complete. We don’t want receiving a card collage to be a passive experience - we want to hook people in so that they feel connected to the creators and want to add something back. We will do more user testing next week to focus on promoting this engagement, build that experience for the user, and iterate with more testing and building.</p>
               
               <p>2. Build the planner interface, to complete the end-to-end experience. In particular, the planner creates a template and sends link to multiple people. As a design decision, we won't focus on this interface as much because we want to hone in on the user experience for collaborator and recipient. For now, we assume that the planner is heavily motivated to start the collage and invite friends.</p>
-              <p>3. A way to optionally see the original template when you send a collage. Part of the fun of the collage appears to be seeing how others meet the challenge of making their piece, but you can’t judge the challenge if you can’t see the original template.</p>
-              <p>4. `One idea we are considering: instead of adding a photo and optionally adding videos on the “other side” of the tile, just add a video, and make the first frame of the video the picture on the tile. That way, when the recipient mouses over the tile, the picture comes to life.</p>
+
+              <p>3. Message board for collaborators to discuss with each other their contributions.</p>
+
+              <p>4. A way to optionally see the original template when you send a collage. Part of the fun of the collage appears to be seeing how others meet the challenge of making their piece, but you can’t judge the challenge if you can’t see the original template.</p>
+              <p>5. `One idea we are considering: instead of adding a photo and optionally adding videos on the “other side” of the tile, just add a video, and make the first frame of the video the picture on the tile. That way, when the recipient mouses over the tile, the picture comes to life.</p>
               <ul>  
                 <li>Advantages of the “video first frame” method: you force everyone to make a video, and you get the illusion of making the videos come to life when you mouse over them</li>
                 <li>Advantages of the “flip the tile” method: it’s technically easier, you DON’T force people to make videos, and you can also add text.</li>              
