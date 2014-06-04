@@ -1,0 +1,17 @@
+<html style="height: 100%; overflow: hidden;"><head>
+    <title>PDFObject example</title>
+    <script type="text/javascript" src="js/pdfobject.js"></script><style type="text/css"></style>
+    <script type="text/javascript">
+
+      window.onload = function (){
+        var myPDF = new PDFObject({ url: "img/poster_v1.5.pdf" }).embed();
+      };
+
+    </script>
+  </head>
+ 
+  <body cz-shortcut-listen="true" style="margin: 0px; padding: 0px; height: 100%; overflow: hidden;">
+  	<object data="img/poster_v1.5.pdf#view=FitH" type="application/pdf" width="100%" height="100%"></object>
+  	<div class="vimiumReset vimiumHUD" style="right: 150px; opacity: 0; display: none;"></div>
+  </body>
+</html>
